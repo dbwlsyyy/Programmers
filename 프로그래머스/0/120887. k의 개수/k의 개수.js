@@ -1,8 +1,7 @@
 function solution(i, j, k) {
-    const arr = []
+    let s = '';
     for(let n = i; n < j+1; n++) {
-        arr.push(n)
+        s += n;
     }
-    const res = arr.join('').match(new RegExp(`${k}`,'g')) || []
-    return res.length
+    return s.split(`${k}`).length -1
 }
